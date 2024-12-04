@@ -10,6 +10,17 @@
 
 	<link rel="stylesheet" href="assets/css/style.css">
 
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+	   (function(){
+	      emailjs.init({
+	        publicKey: "vmfj3Vz2k3dS6j66q",
+	      });
+	   })();
+	</script>
+
 	<title>Tanguy Abdoulvaid Portfolio</title>
 </head>
 <body>
@@ -29,13 +40,13 @@
 							<a href="#about" class="nav__link">About</a>
 						</li>
 						<li class="nav__item">
+							<a href="#qualifications" class="nav__link">Qualifications</a>
+						</li>
+						<li class="nav__item">
 							<a href="#skills" class="nav__link">Skills</a>
 						</li>
 						<li class="nav__item">
 							<a href="#work" class="nav__link">Work</a>
-						</li>
-						<li class="nav__item">
-							<a href="#services" class="nav__link">Services</a>
 						</li>
 						<li class="nav__item">
 							<a href="#contact" class="nav__link">Contact</a>
@@ -47,6 +58,8 @@
 			<div class="btn__share">
 				<i class="uil uil-share-alt social__share"></i>
 			</div>
+
+
 		</nav>
 	</aside>
 		
@@ -73,12 +86,10 @@
 				<div class="home__data">
 					<h1 class="home__title">Hi, I'm Tanguy</h1>
 					<h3 class="home__subtitle">IT Student</h3>
-					<p class="home__description">I am a French student completing my second year of Computer Science bachelor’s Degree.<br />
-					Experiencing a lot of team projects during my curriculum showed me that I love team working and overcoming challenges as a group.<br />
-					I am looking for a stimulating job that will improve my technical skills.
+					<p class="home__description">As a second-year French Computer Science student with hands-on experience in collaborative projects, I perform well in team environments where challenges drive innovation. I am seeking a dynamic role where I can contribute to impactful projects while applying and expanding my technical expertise.
 					</p>
-					<a href="#about" class="button">
-						<i class="uil uil-user button__icon">More About Me</i>
+						<a href="assets/images/CV.pdf" target="_blank" class="button">
+						<i class="uil uil-file button__icon"> See my CV</i>
 					</a>
 					<div class="my__info">
 
@@ -134,11 +145,12 @@
 					</div>
 					<a href="#contact" class="button"><i class="uil uil-navigator button__icon"></i>
 						Contact Me</a>
+
 				</div>
 			</div>
 		</section>
 
-		<section class="qualification section">
+		<section class="qualification section" id="qualifications">
 			<h2 data_heading="My Journey" class="section__title">Qualifications</h2>
 
 			<div class="qualification__container container grid">
@@ -369,7 +381,7 @@
 							<li>created - <span>November 2024</span></li>
 							<li>Technologies - <span>Laravel Postgresql Scrum</span></li>
 							<li>Role - <span>Fullstack</span></li>
-							<li>View - <span><a href="http://51.83.36.122:1206">Click Me</a></span></li>
+							<li>View - <span><a href="http://51.83.36.122:1206" target="_blank">Click Me</a></span></li>
 						</ul>
 					</div>
 				</div>
@@ -388,7 +400,7 @@
 							<li>created - <span>November 2023</span></li>
 							<li>Technologies - <span>Unity C#</span></li>
 							<li>Role - <span>Fullstack</span></li>
-							<li>View - <span><a href="https://shuuss.itch.io/minesweeper">Click Me</a></span></li>
+							<li>View - <span><a href="https://shuuss.itch.io/minesweeper" target="_blank">Click Me</a></span></li>
 						</ul>
 					</div>
 				</div>
@@ -407,7 +419,7 @@
 							<li>created - <span>January 2024</span></li>
 							<li>Technologies - <span>WPF</span></li>
 							<li>Role - <span>Fullstack</span></li>
-							<li>View - <span><a href="https://github.com/lupin100/Demineur">Click Me</a></span></li>
+							<li>View - <span><a href="https://github.com/lupin100/Demineur" target="_blank">Click Me</a></span></li>
 						</ul>
 					</div>
 				</div>
@@ -426,7 +438,7 @@
 							<li>created - <span>October 2024</span></li>
 							<li>Technologies - <span>Phaser.js</span></li>
 							<li>Role - <span>Fullstack</span></li>
-							<li>View - <span><a href="https://shuuss.itch.io/penspill">Click Me</a></span></li>
+							<li>View - <span><a href="https://shuuss.itch.io/penspill" target="_blank">Click Me</a></span></li>
 						</ul>
 					</div>
 				</div>
@@ -445,7 +457,7 @@
 							<li>created - <span>June 2024</span></li>
 							<li>Technologies - <span>Unity C#</span></li>
 							<li>Role - <span>Backend</span></li>
-							<li>View - <span><a href="https://github.com/Shuuss/UGUR">Click Me</a></span></li>
+							<li>View - <span><a href="https://github.com/Shuuss/UGUR" target="_blank">Click Me</a></span></li>
 						</ul>
 					</div>
 				</div>
@@ -464,7 +476,7 @@
 							<li>created - <span>January 2024</span></li>
 							<li>Technologies - <span>WPF</span></li>
 							<li>Role - <span>Fullstack</span></li>
-							<li>View - <span><a href="https://github.com/Shuuss/SAE_DORTAN">Click Me</a></span></li>
+							<li>View - <span><a href="https://github.com/Shuuss/SAE_DORTAN" target="_blank">Click Me</a></span></li>
 						</ul>
 					</div>
 				</div>
@@ -488,7 +500,7 @@
 							<li>created - <span>November 2024</span></li>
 							<li>Technologies - <span>Laravel Postgresql Scrum</span></li>
 							<li>Role - <span>Fullstack</span></li>
-							<li>View - <span><a href="http://51.83.36.122:1206">Click Me</a></span></li>
+							<li>View - <span><a href="http://51.83.36.122:1206" target="_blank">Click Me</a></span></li>
 						</ul>
 					
 						</div>
@@ -496,6 +508,67 @@
 				</div>
 			</div>
 		</div>
+
+		<section class="contact section" id="contact">
+			<h2 class="section__title" data_heading="Get in Touch">Contact Me</h2>
+
+			<div class="contact__container container grid">
+				<div class="contact__content">
+					<div class="contact__info">
+						<div class="contact__card">
+							<i class="uil uil-envelope-edit contact__card-icon"></i>
+							<h3 class="contact__title"> Email</h3>
+							<span class="contact__card-data">tanguy.abdoulvaid@etu.univ-smb.fr</span>
+							<span class="contact__button">
+								Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+							</span>
+						</div>
+
+						<div class="contact__card">
+							<i class="uil uil-whatsapp contact__card-icon"></i>
+							<h3 class="info__title">Whatsapp</h3>
+							<span class="contact__subtitle">07 68 48 93 74</span>
+							<span class="contact__button">
+								Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+				
+
+				<div class="contact__content">
+					<form class="contact__form">
+						<div class="input__container">
+							<input class="input" type="text" id="username">
+							<label for="">Username</label>
+							<span>Username</span>
+						</div>
+
+						<div class="input__container">
+							<input class="input" type="email" id="email">
+							<label for="">Email</label>
+							<span>Email</span>
+						</div>
+
+						<div class="input__container">
+							<input class="input" type="tel" id="phone">
+							<label for="">Phone</label>
+							<span>Phone</span>
+						</div>
+
+						<div class="input__container textarea" id="message">
+							<textarea name="" id="" class="input"></textarea>
+							<label for="">Message</label>
+							<span>Message</span>
+						</div>
+						<button type="submit" class="button">
+						<i class="uil uil-navigator button__icon"></i>
+						Send Message
+					</button>
+					</form>
+				</div>
+			</div>
+		</section>
 
 
 	</main>

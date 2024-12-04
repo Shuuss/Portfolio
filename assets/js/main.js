@@ -60,4 +60,60 @@ function activeWork(){
 	this.classList.add('active-work')
 }
 
-linkWork.forEach(l=> l.addEventListener("click", activeWork))
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc(){
+	let parent = this.parentNode;
+	parent.classList.add("focus")
+}
+
+function blurFunc(){
+	let parent = this.parentNode;
+	if(this.value == ""){
+		parent.classList.remove("focus");
+	}
+}
+
+inputs.forEach((input)=>{
+	input.addEventListener("focus",focusFunc);
+	input.addEventListener("blur",blurFunc);
+})
+
+function sendMail() {
+	let parms ={
+		username : document.getElementById("username").value,
+		email : document.getElementById("email").value,
+		phone : document.getElementById("phone").value,
+		message : document.getElementById("message").value
+	}
+
+	emailjs.send("service_564m92q","template_vjttn9b",parms).then(alert("Email Sent!!"))
+}
+
+
+const sections = document.querySelectorAll("section[id]");
+
+window.addEventListener("scroll", navHighlighter);
+
+function navHighlighter() {
+    let scrollY = window.pageYOffset; // Position actuelle du scroll
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50; // Ajustement pour activer avant d'atteindre complètement le haut
+        const sectionId = current.getAttribute("id");
+
+        // Vérifie si la section est visible dans la fenêtre de scroll
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            const link = document.querySelector('.nav__menu a[href*="' + sectionId + '"]');
+            if (link) {
+                link.classList.add("active-link");
+            }
+        } else {
+            const link = document.querySelector('.nav__menu a[href*="' + sectionId + '"]');
+            if (link) {
+                link.classList.remove("active-link");
+            }
+        }
+    });
+}
