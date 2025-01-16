@@ -54,7 +54,6 @@ const tabs = document.querySelectorAll('[data-target]'),
 
 
 const linkWork = document.querySelectorAll('.work__item')
-console.log(linkWork);
 
 function activeWork(){
 	linkWork.forEach(l=> l.classList.remove('active-work'))
@@ -87,6 +86,29 @@ function sendMail() {
 		phone : document.getElementById("phone").value,
 		message : document.getElementById("message").value
 	}
+
+
+	    if (username.value == "" || message.value == "") {
+        alert("Username and Message are mandatory !");
+        return;
+    }
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (email != "" && !emailPattern.test(email.value)) {
+        alert("Please enter a valid email !");
+        return;
+    }
+
+    const phonePattern = /^0\d{9}$/;
+    if (phone && !phonePattern.test(phone.value)) {
+        alert("Please enter a valid french phone number (must start with a 0 and be 10 characters long, if you don't have a french phone number you can let this field empty) !");
+        return;
+    }
+
+    if (!email && !phone) {
+        alert("Please enter at least an email or a phone number !");
+        return;
+    }
 
 	emailjs.send("service_0qbq2gc","template_b50hqay",parms).then(alert("Email Sent!!"))
 }
