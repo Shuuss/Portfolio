@@ -613,7 +613,7 @@ input {
 	transform: translateX(.25rem);
 }
 
-.active-work{
+.mixitup-control-active{
 	background-color: var(--skin-color);
 	color: var(--title-color);
 }
@@ -850,4 +850,8 @@ textarea.input{
 .input__container.focus span::after{
 	width: 50%;
 	opacity: 1;
+}
+
+#CV{
+	margin-left: 20px;
 }

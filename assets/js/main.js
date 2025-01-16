@@ -54,6 +54,7 @@ const tabs = document.querySelectorAll('[data-target]'),
 
 
 const linkWork = document.querySelectorAll('.work__item')
+console.log(linkWork);
 
 function activeWork(){
 	linkWork.forEach(l=> l.classList.remove('active-work'))
